@@ -15,3 +15,4 @@ yarn-error.log*
 
 #MAC
 .DS_Store
+.nyc_output

@@ -16,12 +16,16 @@
   "scripts": {
     "build": "mkdir -p dist && babel src/index.js --out-file dist/InfiniteScrollReverse.js",
     "prepublish": "npm run build",
-    "lint": "node_modules/.bin/eslint ./src",
-    "precommit": "lint-staged"
+    "eslint": "eslint ./src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "node_modules/.bin/eslint ./src --fix --max-warnings 0 --no-ignore",
+    "*.js": [
+      "eslint --fix",
       "git add"
     ]
   },
@@ -39,13 +43,19 @@
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
+    "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
     "babel-loader": "7.0.0",
     "babel-plugin-add-module-exports": "0.1.2",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
     "babel-preset-env": "1.7.0",
-    "babel-preset-stage-2": "6.13.0",
     "babel-preset-react": "6.24.1",
+    "babel-preset-stage-2": "6.13.0",
+    "eslint": "5.6.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-react": "7.11.1",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "webpack": "2.5.1"
