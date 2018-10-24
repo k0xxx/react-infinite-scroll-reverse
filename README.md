@@ -2,6 +2,6 @@
 
 ## How to use
 
-<!-- ```js -->
-<!-- import InfiniteScrollReverse from 'react-infinite-scroll-reverse'; -->
-<!-- ``` -->
+```js
+import InfiniteScrollReverse from "react-infinite-scroll-reverse";
+```
