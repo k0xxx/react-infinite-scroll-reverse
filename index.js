@@ -45,7 +45,7 @@ class InfinteScrollReverse extends Component {
       // Scroll bottom
     } else {
       // Check loadmore scroll area
-      if (this.infinteRef.current.scrollTop <= 10 && !this.props.isLoading) {
+      if (this.infinteRef.current.scrollTop <= this.props.loadArea && !this.props.isLoading) {
         // Check for available data
         if (this.props.hasMore) {
           // Run data fetching
@@ -74,11 +74,13 @@ InfinteScrollReverse.propTypes = {
   hasMore: PropTypes.bool.isRequired,
   isLoading: PropTypes.bool.isRequired,
   loadMore: PropTypes.func.isRequired,
+  loadArea: PropTypes.number,
 };
 
 InfinteScrollReverse.defaultProps = {
   className: "InfinteScrollReverse",
   children: [],
+  loadArea: 10,
 };
 
 export default InfinteScrollReverse;
