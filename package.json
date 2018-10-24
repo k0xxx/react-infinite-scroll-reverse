@@ -1,22 +1,30 @@
 {
-  "name": "react-infinte-scroll-reverse",
+  "name": "react-infinite-scroll-reverse",
   "version": "1.0.0",
-  "description": "React infinte scroll reverse component",
+  "description": "React infinite scroll reverse component",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/k0xxx/react-infinte-scroll-reverse.git"
+    "url": "git+https://github.com/k0xxx/react-infinite-scroll-reverse.git"
+  },
+  "scripts": {
+    "build": "mkdir -p dist && babel src/InfiniteScrollReverse.js --out-file dist/InfiniteScrollReverse.js"
   },
   "keywords": [
-    "InfinteScroll"
+    "infinite",
+    "scroll",
+    "React"
   ],
+  "dependencies": {
+    "prop-types": "^15.5.8"
+  },
+  "peerDependencies": {
+    "react": "^0.14.9 || ^15.3.0 || ^16.0.0"
+  },
   "author": "Klimenko Aleksandr",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/k0xxx/react-infinte-scroll-reverse/issues"
+    "url": "https://github.com/k0xxx/react-infinite-scroll-reverse/issues"
   },
-  "homepage": "https://github.com/k0xxx/react-infinte-scroll-reverse#readme"
+  "homepage": "https://github.com/k0xxx/react-infinite-scroll-reverse#readme"
 }
