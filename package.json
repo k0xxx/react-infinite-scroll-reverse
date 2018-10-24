@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "mkdir -p dist && babel src/index.js --out-file dist/InfiniteScrollReverse.js",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "eslint": "eslint ./src"
   },
   "husky": {
