@@ -2,13 +2,28 @@
   "name": "react-infinite-scroll-reverse",
   "version": "1.0.0",
   "description": "React infinite scroll reverse component",
+  "author": "Klimenko Aleksandr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k0xxx/react-infinite-scroll-reverse/issues"
+  },
+  "homepage": "https://github.com/k0xxx/react-infinite-scroll-reverse#readme",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/k0xxx/react-infinite-scroll-reverse.git"
   },
   "scripts": {
-    "build": "mkdir -p dist && babel src/InfiniteScrollReverse.js --out-file dist/InfiniteScrollReverse.js"
+    "build": "mkdir -p dist && babel src/index.js --out-file dist/InfiniteScrollReverse.js",
+    "prepublish": "npm run build",
+    "lint": "node_modules/.bin/eslint ./src",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "node_modules/.bin/eslint ./src --fix --max-warnings 0 --no-ignore",
+      "git add"
+    ]
   },
   "keywords": [
     "infinite",
@@ -21,10 +36,18 @@
   "peerDependencies": {
     "react": "^0.14.9 || ^15.3.0 || ^16.0.0"
   },
-  "author": "Klimenko Aleksandr",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/k0xxx/react-infinite-scroll-reverse/issues"
-  },
-  "homepage": "https://github.com/k0xxx/react-infinite-scroll-reverse#readme"
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-jest": "23.6.0",
+    "babel-loader": "7.0.0",
+    "babel-plugin-add-module-exports": "0.1.2",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-stage-2": "6.13.0",
+    "babel-preset-react": "6.24.1",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "webpack": "2.5.1"
+  }
 }
