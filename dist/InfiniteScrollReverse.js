@@ -124,4 +124,4 @@ InfiniteScrollReverse.defaultProps = {
 };
 
 exports.default = InfiniteScrollReverse;
-module.exports = exports['default'];
+module.exports = exports.default;
